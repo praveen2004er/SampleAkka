@@ -23,7 +23,7 @@ public class ChildSimpleBehavior extends AbstractBehavior<String> {
                     return this;
                 })
                 .onMessageEquals("spawn", () -> {
-                    ActorRef<String> secondActor = getContext().spawn(ChildSimpleBehavior.create(), "actorChild");
+                    ActorRef<String> secondActor = getContext().spawn(FirstSimpleBehaviour.create(), "actorChild");
                     secondActor.tell("path");
                     return this;
                 })

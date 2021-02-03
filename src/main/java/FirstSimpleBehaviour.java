@@ -17,7 +17,7 @@ public class FirstSimpleBehaviour extends AbstractBehavior<String> {
     public Receive<String> createReceive() {
         return newReceiveBuilder()
                 .onMessageEquals("path", () -> {
-                    System.out.println("path = "+ getContext().getSelf().path());
+                    System.out.println("first simple behaviour path = "+ getContext().getSelf().path());
                     return this;
                 })
                 .onAnyMessage(message -> {

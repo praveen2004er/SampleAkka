@@ -5,7 +5,7 @@ public class ChildMain {
         ActorSystem<String> actorSystem = ActorSystem.create(ChildSimpleBehavior.create(), "ChildActorSystem");
         actorSystem.tell("Hello World!");
         actorSystem.tell("Hello World! again");
-        actorSystem.tell("path");
-        actorSystem.tell("spawn");
+        actorSystem.tell("path"); //parent actor path
+        actorSystem.tell("spawn"); // creates child actor
     }
 }
